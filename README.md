@@ -12,8 +12,10 @@
 - All random strings generated(Secret Key in this case) are **true random strings** obtained from random.org's API.
 - Please note that random strings by the API are only of **max length 20**. So **please make sure the message length is <=20**
 	
-  ### example usage
-  Hello
+  ### Example usage
+   #### Encrypt
+   
+   	encrypt pavas
 
 
 # CS430 Assignment 1
