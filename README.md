@@ -1,6 +1,7 @@
-###CS430 Assignment 1
+# CS430 Assignment 1
 
-## Name: Sachit Mohan Nayak; USCID: 1010011067
+## Name: Pavas Navaney
+## USCID: 3407804292
 
 ### Basic guidelines to operate programs.
 - The progams take in command line inputs for operation type, message or cipher input, decryption key and modes.
