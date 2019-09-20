@@ -4,6 +4,7 @@
 ## USCID: 3407804292
 
 ### Basic guidelines to operate programs.
+1. One-Time Pad
 - The progams take in command line inputs for operation type, message or cipher input, decryption key and modes.
 - The program **can be run without command line parameters if need be**. However in such cases, encryption and decryption is done in sequence within the same run of the program and runs on the default text message built into the program. If you want to feed in custom message, please do so using command line parameters.
 
