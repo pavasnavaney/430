@@ -16,6 +16,21 @@
   Hello
 
 
+# CS430 Assignment 1
+
+## Name: Sachit Mohan Nayak; USCID: 1010011067
+
+### Basic guidelines to operate programs.
+- The progams take in command line inputs for operation type, message or cipher input, decryption key and modes.
+- The program **can be run without command line parameters if need be**. However in such cases, encryption and decryption is done in sequence within the same run of the program and runs on the default text message built into the program. If you want to feed in custom message, please do so using command line parameters.
+
+- All random strings generated are **true random strings** obtained from random.org's API.
+
+- Please note that random strings by the API are only of **max length 20**. So for the first program, **one time pad, please make sure the message length is <=20**
+
+- Only program 2 requires the 'mode' command line parameter, others just require the rest 3 params only.
+
+
 ### Command line parameters
 - "- -operation", "**-o**" : denotes the task - 'encrypt' or 'decrypt' or ('generate' or 'verify' for p4.py only). Only these 2 are valid tasks allowed.
 - "- -input", "**-i**": the message to be encrypted or the cipher to be decrypted. For program 3 and 4, while decrypting feed in the JSON object with 4 parameters -> nonce, header, tag, and cipher. Encrypted Authentication and CBC MAC modes require these.
@@ -26,7 +41,7 @@
 
 ### examples
 
-1. p1.py program
+- p1.py program
 
    default mode: python3 p1.py
    sample encrypt only: python3 p1.py -o encrypt -i 'World Peace'
@@ -39,7 +54,7 @@
         Now decrypting: 
         Decrypted msg:  World Peace
         
-2. p2.py program
+- p2.py program
 
    default mode: python3 p2.py
    
@@ -69,7 +84,7 @@ sample ctr encrypt only: python3 p2.py -o encrypt -i 'World Peace' -m 'ctr'
 			Now decrypting: 
 			Decrypted msg:  World Peace
 
-3. p3.py program
+- p3.py program
 
    default mode: python3 p3.py
    sample encrypt only: python3 p3.py -o encrypt -i 'World Peace'
@@ -82,7 +97,22 @@ sample ctr encrypt only: python3 p2.py -o encrypt -i 'World Peace' -m 'ctr'
         Now decrypting: 
         Decrypted msg:  World Peace
 
+- p4.py program
 
+   default mode: python3 p4.py
+   sample encrypt only: python3 p4.py -o generate -i 'World Peace'
+    sample encryption output is: 
+       key generated is:  G10mqXsY1GxCtrpg
+		Encrypted msg in bytes:  {"plain_text": "World Peace", "tag": "pX5vaT+jG+tmSTydj3fiKg=="}
+
+   
+ sample decrypt only: python3 p4.py -o verify -i '{"plain_text": "World Peace", "tag": "pX5vaT+jG+tmSTydj3fiKg=="}' -d 'G10mqXsY1GxCtrpg'
+ 
+    sample decryption output:
+        Now decrypting: 
+		verified successfully.
+		Received Tag:  pX5vaT+jG+tmSTydj3fiKg==
+		Generated Tag:  pX5vaT+jG+tmSTydj3fiKg==
 
 
 
