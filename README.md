@@ -5,14 +5,12 @@
 
 ### Basic guidelines to operate programs.
 1. One-Time Pad
-- The progams take in command line inputs for operation type, message or cipher input, decryption key and modes.
-- The program **can be run without command line parameters if need be**. However in such cases, encryption and decryption is done in sequence within the same run of the program and runs on the default text message built into the program. If you want to feed in custom message, please do so using command line parameters.
+- The Program consists of two files OneTimePad.java and StringGenerator.java.
+- The progams take in command line inputs for operation type(encrypt) and the message in case of encryption.
+- The progams take in command line inputs for operation type(decrypt) , the secret key and the byte[] ciphertext.
+- All random strings generated(Secret Key in this case) are **true random strings** obtained from random.org's API.
+- Please note that random strings by the API are only of **max length 20**. So **please make sure the message length is <=20**
 
-- All random strings generated are **true random strings** obtained from random.org's API.
-
-- Please note that random strings by the API are only of **max length 20**. So for the first program, **one time pad, please make sure the message length is <=20**
-
-- Only program 2 requires the 'mode' command line parameter, others just require the rest 3 params only.
 
 
 ### Command line parameters
