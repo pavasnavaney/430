@@ -5,7 +5,7 @@
 
 ### Basic guidelines to operate programs.
 
-1. One-Time Pad
+  ## 1. One-Time Pad
 - The Program consists of two files OneTimePad.java and StringGenerator.java.
 - The progams take in command line inputs for operation type(encrypt) and the message in case of encryption.
 - The progams take in command line inputs for operation type(decrypt) , the secret key and the byte[] ciphertext.
@@ -14,9 +14,20 @@
 	
   ### Example usage
    #### Encrypt
+   Example usage : java OneTimePad encrypt pavas
+   Sample Encryption output :
+  
+   		Your key is : g8sWF
+		Please note it down in a safe place as you will need this to decrypt your message!
+		Your encrypted message is : 23 89 5 54 53
+  
+  #### Decrypt
+   Example usage : java OneTimePad decrypt g8sWF 23 89 5 54 53
+   Sample Encryption output :
+  
+   		Your decrypted Message is : pavas
    
-   	encrypt pavas
-
+	
 
 # CS430 Assignment 1
 
