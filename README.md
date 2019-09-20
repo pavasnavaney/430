@@ -1,4 +1,4 @@
-#CS430 Assignment 1
+###CS430 Assignment 1
 
 ## Name: Sachit Mohan Nayak; USCID: 1010011067
 
